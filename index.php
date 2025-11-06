@@ -1,11 +1,7 @@
-<?php 
-require_once 'config/db.php';
 
-// $insert = "insert into users(name) values(?)";
-$insert = "insert into users (name) values(:name)";
-// $sql = "insert into users(name) values('John')";
+<form action="./form.php" method="post">
+    <input type="email" name="email" id="email">
 
-$stm = $conn -> prepare($insert);
-// $stm -> execute(['Haji' ]);
-$stm ->execute(['name' => 'Anda Mbillah']);
-
+    <!-- <input type="submit" value="Save"> -->
+    <button type="submit">Save</button>
+</form>

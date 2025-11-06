@@ -1,14 +1,14 @@
 <?php
-
-$server = '127.0.0.1'; // 127.0.0.1
-$dbname = 'crud_app';
+//connect to the server 
+$server = '127.0.0.1'; // localhost
+$dbname = 'crud_app'; 
 $username = 'root';
 $password = '';
 
-// $dns = "mysql:host=$server;dbname=$dbname";
+$dsn = "mysql:host=$server;dbname=$dbname";
 // connect to db
 try{
-    $conn = new PDO("mysql:host=$server;dbname=$dbname",$username, $password);
+    $conn = new PDO($dsn,$username, $password);
     // set the PDO error mode to exception
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     // echo "Connected Successfully";
